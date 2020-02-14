@@ -1,0 +1,145 @@
+<main>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-7">
+						<div class="card shadow-lg border-0 rounded-lg mt-5">
+							<div class="card-header">
+								<h3 class="text-center font-weight-light my-4">Cadastro de
+									Livros</h3>
+							</div>
+							<div class="card-body">
+								<h:messages></h:messages>
+								<h:form>
+									<div class="form-row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="nome">Nome</label>
+												<h:inputText class="form-control py-4" id="nome" type="text"
+													value="#{alunoCadastroManager.aluno.nome}" />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="Sobrenome">Sobrenome</label>
+												<h:inputText class="form-control py-4" id="Sobrenome"
+													type="text" value="#{alunoCadastroManager.aluno.sobrenome}" />
+											</div>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="cpf">CPF</label>
+												<h:inputText class="form-control py-4" id="cpf" type="text"
+													value="#{alunoCadastroManager.aluno.cpf}" />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="Matricula">Matrícula</label>
+												<h:inputText class="form-control py-4" id="Matricula"
+													type="text" value="#{alunoCadastroManager.aluno.matricula}" />
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="small mb-1" for="inputEmailAddress">E-mail</label>
+										<h:inputText class="form-control py-4" id="inputEmailAddress"
+											type="email" value="#{alunoCadastroManager.aluno.email}" />
+									</div>
+									<div class="form-group">
+										<label for="sel1">Status:</label>
+										<h:selectOneMenu value="#{alunoCadastroManager.aluno.status}">
+											<f:selectItem itemValue="0" itemLabel="Bloqueado" />
+											<f:selectItem itemValue="1" itemLabel="Ativo" />
+											<f:selectItem itemValue="2" itemLabel="Desligado" />
+											<f:selectItem itemValue="3" itemLabel="Trancado" />
+										</h:selectOneMenu>
+									</div>
+									<div class="form-row">
+										<div class="col-md-6">
+											<label class="small mb-1" for="Sexo">Sexo</label> <br />
+											<div class="form-check-inline">
+												<h:selectOneRadio value="#{alunoCadastroManager.aluno.sexo}">
+													<f:selectItem itemValue="Feminino" itemLabel="Feminino" />
+													<f:selectItem itemValue="Masculino" itemLabel="Masculino" />
+												</h:selectOneRadio>
+											</div>
+
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="dataDeNascimento">Data
+													de nascimento</label>
+												<h:inputText
+													value="#{alunoCadastroManager.aluno.dtNascimento}"
+													id="dataDeNascimento" />
+											
+											</div>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="col-md-6">
+											<label class="small mb-1" for="NecessidadeEspecial">Necessidade
+												Especial?</label><br />
+											<div class="form-check-inline">
+												<h:selectOneRadio
+													value="#{alunoCadastroManager.aluno.temNecessidadeEspecial}">
+													<f:selectItem itemValue="0" itemLabel="Sim" />
+													<f:selectItem itemValue="1" itemLabel="Não" />
+												</h:selectOneRadio>
+
+											</div>
+										</div>
+										<div class="form-group col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="Telefone">Telefone</label>
+												<h:inputText class="form-control py-4" id="Telefone"
+													value="#{alunoCadastroManager.aluno.telefone}" />
+											</div>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="CEP">CEP</label>
+												<h:inputText class="form-control py-4" id="CEP" type="text"
+													value="#{alunoCadastroManager.aluno.cep}" />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="Endereço">Endereço</label>
+												<h:inputText class="form-control py-4" id="Endereço"
+													type="text" value="#{alunoCadastroManager.aluno.endereco}" />
+											</div>
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="Cidade">Cidade</label>
+												<h:inputText class="form-control py-4" id="Cidade"
+													type="text" value="#{alunoCadastroManager.aluno.cidade}" />
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="small mb-1" for="UF">UF</label>
+												<h:inputText class="form-control py-4" id="UF" type="text"
+													value="#{alunoCadastroManager.aluno.uf}" />
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group mt-4 mb-0">
+										<h:commandButton class="btn btn-primary btn-block"
+											action="#{alunoCadastroManager.salvar()}" value="Cadastrar" />
+									</div>
+								</h:form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</main>
